@@ -28,4 +28,13 @@ func main() {
 	areacuadradao := baseCuadrado * baseCuadrado
 	fmt.Println(areacuadradao)
 
+	// operadoares matematicos
+	y := 10
+	x := 50
+
+	// suma
+	result := x + y
+
+	fmt.Println(result)
+
 }
