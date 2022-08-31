@@ -3,22 +3,27 @@ package main
 import "fmt"
 
 func main() {
+	//array
+	var array [4]int
+	array[0] = 1
+	fmt.Println(array, len(array), cap(array))
 
-	// defer ejecuta l funicon antes de todo muera
-	defer fmt.Println("Hola")
-	fmt.Println("Mondo")
+	// slice
+	slice := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+	fmt.Println(slice, len(slice), cap(slice))
 
-	// continue
-	for i := 0; i < 10; i++ {
-		fmt.Println(i)
+	fmt.Println(slice[0])
+	fmt.Println(slice[:3])
+	fmt.Println(slice[2:4])
+	fmt.Println(slice[4:])
 
-		if i == 2 {
-			fmt.Println("es 2")
-			continue
-		}
+	// add
+	slice = append(slice, 7)
 
-		if i == 4 {
-			break
-		}
-	}
+	//add list
+	newSlice := []int{11, 12}
+	slice = append(slice, newSlice...)
+
+	fmt.Println(slice)
+
 }
