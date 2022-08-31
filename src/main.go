@@ -2,33 +2,24 @@ package main
 
 import "fmt"
 
-func isPalindromo(text string) {
-	var textCopy string
-	for i := len(text) - 1; i >= 0; i-- {
-		textCopy += string(text[i])
-	}
-	if text == textCopy {
-		fmt.Println("is paili")
-	} else {
-		fmt.Println("no es pali")
-	}
-}
 func main() {
+	m := make(map[string]int)
 
-	slice := []string{"Hola", "Mundo"}
+	m["hola"] = 15
+	m["hh"] = 16
+	fmt.Println(m)
 
-	for i, value := range slice {
-		fmt.Println(i, value)
+	for i, v := range m {
+		fmt.Println(i, v)
 	}
 
-	for _, value := range slice {
-		fmt.Println(value)
-	}
+	// obtner valor
 
-	for i := range slice {
-		fmt.Println(i)
-	}
+	value, ok := m["hola"]
+	fmt.Println(value, ok)
 
-	isPalindromo("hola")
-	isPalindromo("ama")
+	// obtner validar si existeS
+
+	value2, ok2 := m["hola3"]
+	fmt.Println(value2, ok2)
 }
