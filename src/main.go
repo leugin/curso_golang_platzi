@@ -1,38 +1,24 @@
 package main
 
-import (
-	"fmt"
-	"log"
-	"strconv"
-)
+import "fmt"
 
 func main() {
 
-	valor1 := 1
-	valor2 := 2
-
-	if valor1 == 1 {
-		fmt.Println("Si")
-	} else {
-		fmt.Println("No")
-	}
-	if valor1 == 1 && valor2 == 2 {
-		fmt.Println("Si")
-	} else {
-		fmt.Println("No")
+	switch modulo := 2 % 2; modulo {
+	case 0:
+		fmt.Println("es pard")
+	default:
+		fmt.Println("es impard")
 	}
 
-	if valor1 == 1 || valor2 == 3 {
-		fmt.Println("Si")
-	} else {
-		fmt.Println("No")
-	}
-
-	value, err := strconv.Atoi("53")
-
-	if err != nil {
-		log.Fatal(err)
-	} else {
-		fmt.Println(value)
+	value := 200
+	// Sin condicion
+	switch {
+	case value > 100:
+		fmt.Println("MAyor a 100")
+	case value < 0:
+		fmt.Println("minor a 0")
+	default:
+		fmt.Println("Otro")
 	}
 }
