@@ -1,42 +1,38 @@
 package main
 
-import "fmt"
-
-func normalFunction(message string) {
-	fmt.Println(message)
-}
-
-func tripeAdmin(a, b int, c string) {
-	fmt.Println(a, b, c)
-}
-
-func returnValue(a int) int {
-	return a + 2
-}
-
-func returnValue2(a int) (c, d int) {
-	return a, a * 2
-}
+import (
+	"fmt"
+	"log"
+	"strconv"
+)
 
 func main() {
-	// for condicional
 
-	fmt.Println("CONDICIONAL")
-	for i := 0; i <= 10; i++ {
-		fmt.Println(i)
+	valor1 := 1
+	valor2 := 2
+
+	if valor1 == 1 {
+		fmt.Println("Si")
+	} else {
+		fmt.Println("No")
 	}
-	fmt.Println("while")
-
-	/// for while
-	counter := 0
-	for counter < 10 {
-		counter++
-		fmt.Println(counter)
+	if valor1 == 1 && valor2 == 2 {
+		fmt.Println("Si")
+	} else {
+		fmt.Println("No")
 	}
-	fmt.Println("for ever")
 
-	for {
-		fmt.Println(counter)
-		counter++
+	if valor1 == 1 || valor2 == 3 {
+		fmt.Println("Si")
+	} else {
+		fmt.Println("No")
+	}
+
+	value, err := strconv.Atoi("53")
+
+	if err != nil {
+		log.Fatal(err)
+	} else {
+		fmt.Println(value)
 	}
 }
