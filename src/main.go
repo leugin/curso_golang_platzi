@@ -4,21 +4,21 @@ import "fmt"
 
 func main() {
 
-	switch modulo := 2 % 2; modulo {
-	case 0:
-		fmt.Println("es pard")
-	default:
-		fmt.Println("es impard")
-	}
+	// defer ejecuta l funicon antes de todo muera
+	defer fmt.Println("Hola")
+	fmt.Println("Mondo")
 
-	value := 200
-	// Sin condicion
-	switch {
-	case value > 100:
-		fmt.Println("MAyor a 100")
-	case value < 0:
-		fmt.Println("minor a 0")
-	default:
-		fmt.Println("Otro")
+	// continue
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
+
+		if i == 2 {
+			fmt.Println("es 2")
+			continue
+		}
+
+		if i == 4 {
+			break
+		}
 	}
 }
