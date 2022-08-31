@@ -19,16 +19,24 @@ func returnValue2(a int) (c, d int) {
 }
 
 func main() {
-	normalFunction("Hola mundo")
-	tripeAdmin(1, 2, "3")
+	// for condicional
 
-	value := returnValue(5)
-	fmt.Println(value)
+	fmt.Println("CONDICIONAL")
+	for i := 0; i <= 10; i++ {
+		fmt.Println(i)
+	}
+	fmt.Println("while")
 
-	value1, value2 := returnValue2(2)
-	fmt.Println(value1, value2)
+	/// for while
+	counter := 0
+	for counter < 10 {
+		counter++
+		fmt.Println(counter)
+	}
+	fmt.Println("for ever")
 
-	// tomando solo e primer val
-	value3, _ := returnValue2(2)
-	fmt.Println(value3)
+	for {
+		fmt.Println(counter)
+		counter++
+	}
 }
