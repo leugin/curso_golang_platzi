@@ -3,38 +3,20 @@ package main
 import "fmt"
 
 func main() {
-	// declaracion de constantes
-	const p1 float64 = 3.14
-	const p2 float32 = 3.14
-	fmt.Println("pi :", p1)
-	fmt.Println("p2 :", p2)
-	// Declaracion de variables
-	base := 12
-	var altura int = 14
-	var area int
+	hello := "Hola"
+	fmt.Println(hello)
+	nombre := "platzi"
+	cursos := 500
 
-	fmt.Println("base", base)
-	fmt.Println("altura", altura)
-	fmt.Println("area", area)
+	//printf
+	fmt.Printf("%s hola tiene mas de %d\n", nombre, cursos)
+	fmt.Printf("%v hola tiene mas de %v\n", nombre, cursos)
 
-	var a int
-	var b float64
-	var c string
-	var d bool
+	//Spring
+	message := fmt.Sprintf("%s hola tiene mas de %d\n", nombre, cursos)
 
-	fmt.Println(a, b, c, d)
+	fmt.Println(message)
 
-	const baseCuadrado = 10
-	areacuadradao := baseCuadrado * baseCuadrado
-	fmt.Println(areacuadradao)
-
-	// operadoares matematicos
-	y := 10
-	x := 50
-
-	// suma
-	result := x + y
-
-	fmt.Println(result)
-
+	// tipo de datos
+	fmt.Printf("Hello %T\n", message)
 }
