@@ -2,24 +2,18 @@ package main
 
 import "fmt"
 
+type car struct {
+	brand string
+	year  int
+}
+
 func main() {
-	m := make(map[string]int)
+	myCar := car{brand: "Ford", year: 500}
+	fmt.Println(myCar)
 
-	m["hola"] = 15
-	m["hh"] = 16
-	fmt.Println(m)
+	// vacia
 
-	for i, v := range m {
-		fmt.Println(i, v)
-	}
-
-	// obtner valor
-
-	value, ok := m["hola"]
-	fmt.Println(value, ok)
-
-	// obtner validar si existeS
-
-	value2, ok2 := m["hola3"]
-	fmt.Println(value2, ok2)
+	var otherCar car
+	otherCar.brand = "Demo"
+	fmt.Println(otherCar)
 }
